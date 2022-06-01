@@ -16,7 +16,7 @@ module.exports = async function (fastify, opts) {
             process.env.GITHUB_CLIENT_ID +
             "&scope=user:email,user:read&redirect_uri=" +
             // process.env.GITHUB_REDIRECT_URI
-            "http://localhost:3000/@github/callback"
+            "https://ferrantapi-production.up.railway.app/@github/callback"
         )
     })
 
