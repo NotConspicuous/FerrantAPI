@@ -16,7 +16,7 @@ module.exports = async function (fastify, opts) {
             process.env.GITHUB_CLIENT_ID +
             "&scope=user:email,user:read&redirect_uri=" +
             // process.env.GITHUB_REDIRECT_URI
-            "https://ferrantapi-production.up.railway.app/@github/callback"
+            process.env.BASE_URL+"/@github/callback"
         )
     })
 
@@ -36,7 +36,7 @@ module.exports = async function (fastify, opts) {
                 client_id: process.env.GITHUB_CLIENT_ID,
                 client_secret: process.env.GITHUB_CLIENT_SECRET,
                 code: request.query.code,
-                redirect_uri: "https://ferrantapi-production.up.railway.app/@github/callback"
+                redirect_uri: process.env.BASE_URL+"/@github/callback"
             })
         })
 
