@@ -36,7 +36,7 @@ module.exports = async function (fastify, opts) {
                 client_id: process.env.GITHUB_CLIENT_ID,
                 client_secret: process.env.GITHUB_CLIENT_SECRET,
                 code: request.query.code,
-                redirect_uri: "http://localhost:3000/@github/callback"
+                redirect_uri: "https://ferrantapi-production.up.railway.app/@github/callback"
             })
         })
 
