@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Ferrant</title>
+        <link rel="stylesheet" href="public/standard.css">
+    </head>
+    <body>
+        <div nav>
+            <div blur></div>
+            <div tabindex="0" nav_link>
+                Recent
+            </div>
+            <div tabindex="0" nav_link>
+                Files
+            </div> 
+            <div tabindex="0" nav_link>
+                Shared
+            </div>  
+            <div tabindex="0" nav_link>
+                Trash
+            </div>
+            <div spacer></div>
+            <div id="logged_in_skeleton" style="display: flex; padding: 6px">
+                <div skeleton style="border-radius: 6px; width: 100px;"></div>
+            </div>
+            <div id="not_logged_in" style="display: none; padding: 6px">
+                <button onclick="window.location = '/@github/auth'">Sign in with Github</button>
+            </div>
+            <div id="logged_in" style="display: none; margin: 3px; padding: 3px; padding-left: 7px; padding-right: 7px; background: #A181FF22; border-radius: 8px;">
+                <img id="avatar" skeleton style="border-radius: 50%; width: 30px; height: 30px; margin-right: 6px; position: relative; top: 50%; transform: translateY(-50%);"></img>
+                <button onclick="window.location = '/@github/remove'">Log Out</button>
+            </div>
+        </div>
+        <div id="dev_only" app center style="height: 2em; position: relative; overflow: hidden">
+            <div style="display: flex; position: relative; top: 50%; transform: translateY(-50%);">
+                <div style="flex: 1;">
+                    <h1><a style="font-size: 2em">Your Files.</a></h1> 
+                </div>
+            </div>
+        </div>
+        <script src="public/account.js"></script>
+    </body>
+</html>
